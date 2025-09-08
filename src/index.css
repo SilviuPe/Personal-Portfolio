@@ -1,68 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    --color-primary: #161513;
+    --color-secondary: #2A2A2A;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    --color-primary-footer: #222222;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+    --color-primary-white: #ffffff;
+
+
+    --spacing-xxs: 0.25rem;
+    --spacing-xs: 0.5rem;
+
+    --spacing-s: 0.75rem;
+    --spacing-sm: 0.75rem;
+    --spacing-small: 0.75rem;
+
+    --spacing-m: 1rem;
+    --spacing-md: 1rem;
+    --spacing-medium: 1rem;
+
+    --spacing-l: 1.5rem;
+    --spacing-lg: 1.5rem;
+    --spacing-large: 1.5rem;
+
+    --spacing-xl: 2rem;
+    --spacing-x-lg: 2rem;
+    --spacing-x-large: 2rem;
+
+    --spacing-1-point-5-xl: 3rem;
+    --spacing-1-point-5-x-lg: 3rem;
+    --spacing-1-point-5-x-large: 3rem;
+
+    --spacing-2xl: 4rem;
+    --spacing-2x-lg: 4rem;
+    --spacing-2x-large: 4rem;
+
+
+    --text-xxs: 0.25em;
+    --text-xs: 0.5em;
+
+    --text-s: 0.75em;
+    --text-sm: 0.75em;
+    --text-small: 0.75em;
+
+    --text-m: 1em;
+    --text-md: 1em;
+    --text-medium: 1em;
+
+    --text-l: 1.5em;
+    --text-lg: 1.5em;
+    --text-large: 1.5em;
+
+    --text-xl: 2em;
+    --text-x-lg: 2em;
+    --text-x-large: 2em;
+
+    --text-1-point-5-xl: 3em;
+    --text-1-point-5-x-lg: 3em;
+    --text-1-point-5-x-large: 3em;
+
+    --text-2xl: 4em;
+    --text-2x-lg: 4em;
+    --text-2x-large: 4em;
+
+
+
+    --font-primary: 'Poppins', sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    background-color: var(--color-primary);
+    margin: 0;
+    font-family: var(--font-primary), serif;
 }
