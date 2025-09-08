@@ -24,7 +24,8 @@
     "noUncheckedSideEffectImports": true,
     "baseUrl": "./src",
     "paths": {
-      "@components/*": ["Components/*"]
+      "@components/*": ["Components/*"],
+      "@assets/*": ["assets/*"]
     }
   },
   "extends": "./tsconfig.json",

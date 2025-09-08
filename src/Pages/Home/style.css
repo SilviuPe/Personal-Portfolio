@@ -1,0 +1,60 @@
+.profile-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-2xl) 0 var(--spacing-xl) 0;
+}
+
+.title-container {
+    text-align: center;
+}
+
+.title-container h1 {
+    color: var(--color-primary-white);
+    font-size: var(--text-1-point-5-xl);
+}
+
+.title-container h1 .green-span {
+    background: linear-gradient(
+            90deg,
+            rgba(207, 207, 40, 0.58),
+            #007912
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* optional for non-WebKit browsers */
+    background-clip: text;
+    color: transparent;
+}
+
+.title-container h1 .blue-span {
+ background: linear-gradient(
+         90deg,
+         #5BADFF,
+         #1373D1
+ );
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ /* optional for non-WebKit browsers */
+ background-clip: text;
+ color: transparent;
+}
+
+.subtitle-container {
+    padding: 0 var(--spacing-2xl);
+}
+
+.subtitle-container p {
+    color: var(--text-secundary);
+    font-size: var(--text-md);
+    font-weight: 500;
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+
+    padding-top: var(--spacing-xl);
+}

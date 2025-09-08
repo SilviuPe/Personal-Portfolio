@@ -1,0 +1,14 @@
+.get-in-touch-button {
+    border-radius: 50px;
+    border: 0;
+
+    background-color: var(--color-primary-white);
+
+    padding: var(--spacing-m) var(--spacing-xl);
+
+    font-family: var(--font-primary), serif;
+    font-weight: 600;
+    font-size: var(--text-m);
+
+    cursor: pointer;
+}
