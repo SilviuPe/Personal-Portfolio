@@ -1,0 +1,33 @@
+.experience-overview-title-container h2 {
+    font-size: var(--text-xl);
+
+    text-align: center;
+    text-transform: uppercase;
+
+    background: linear-gradient(
+            90deg,
+            #5BADFF,
+            #1373D1
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* optional for non-WebKit browsers */
+    background-clip: text;
+    color: transparent;
+}
+
+.experience-overview-container {
+    padding-top: var(--spacing-2xl);
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.experience-list-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}

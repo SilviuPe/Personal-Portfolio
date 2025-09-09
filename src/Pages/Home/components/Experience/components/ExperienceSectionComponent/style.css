@@ -1,0 +1,39 @@
+.experience-content-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.experience-content-icon-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-m);
+}
+.experience-details-container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-family: var(--font-primary), serif;
+}
+
+.experience-title-container h3 {
+    color: var(--color-primary-white);
+    font-size: var(--text-l);
+}
+
+.experience-date-content {
+    color: var(--text-secundary);
+    font-size: 1.25em;
+}
+
+.experience-description-content {
+    color: var(--text-secundary);
+    font-size: 1.25em;
+}

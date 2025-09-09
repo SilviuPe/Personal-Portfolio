@@ -6,11 +6,11 @@ const FooterComponent  = () => {
     return (
         <div className={'footer-component'}>
             <div>
-                <ul className={'links-list'}>
-                    {pages.map(item => (<li key={item}>
+                <div className={'links-list'}>
+                    {pages.map(item => (<div key={item}>
                         <a href={`/${item.toLowerCase()}`}>{item}</a>
-                    </li>))}
-                </ul>
+                    </div>))}
+                </div>
             </div>
         </div>
     )

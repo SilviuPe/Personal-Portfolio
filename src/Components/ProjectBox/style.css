@@ -1,0 +1,35 @@
+.project-box-container {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, margin 0.3s ease;
+
+}
+
+.project-box-container:hover {
+    margin-left: var(--spacing-xs);
+    margin-right: var(--spacing-xs);
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 1);
+    transform: translateY(-8px);
+}
+
+
+
+.project-box-container img {
+    border-radius: 20px 20px 0 0;
+}
+
+.project-box-content-container {
+    background-color: var(--color-background-project-box-content-container);
+    display: flex;
+
+    border-radius: 0 0 20px 20px;
+}
+
+.project-box-image-container {
+    display: flex;
+}

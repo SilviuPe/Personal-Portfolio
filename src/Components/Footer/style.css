@@ -1,6 +1,7 @@
 .footer-component {
     background-color: var(--color-primary-footer);
     padding: var(--spacing-m);
+    display: flex;
 }
 
 .links-list {
@@ -15,4 +16,5 @@
     text-decoration: none;
     color: var(--color-primary-white);
     font-size: var(--text-m);
+    display: flex;
 }
