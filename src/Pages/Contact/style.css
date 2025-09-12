@@ -1,0 +1,33 @@
+.contact-page-content-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--spacing-2xl);
+    gap: var(--spacing-s);
+}
+
+.contact-page-content-title h1 {
+    color: var(--color-primary-white);
+
+    font-size: var(--text-1-point-5-x-large);
+
+    margin-bottom: 0;
+}
+
+.contact-page-content-subtitle p {
+    color: var(--text-secundary);
+    font-size: var(--text-md);
+
+    margin-top: 0;
+}
+
+.contact-page-content-contacts-list-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--spacing-s);
+}

@@ -29,3 +29,7 @@
 
     margin: 0;
 }
+
+.project-box-redirect-section-container img {
+    border-radius: 0;
+}

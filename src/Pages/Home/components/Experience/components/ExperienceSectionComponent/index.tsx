@@ -11,7 +11,7 @@ const ExperienceSectionComponent = (props: ExperienceSectionComponentPropsI) => 
             <div className={'experience-details-container'}>
                 <div className={'experience-content-icon-title'}>
                     <div className={'experience-icon-container'}>
-                        <img src={icon} alt={title}/>
+                        <img src={icon} alt={title} width={32} height={32}/>
                     </div>
                     <div className={'experience-title-container'}>
                         <h3>{title}</h3>

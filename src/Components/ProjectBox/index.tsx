@@ -9,7 +9,7 @@ const ProjectBoxComponent = (props: ProjectBoxComponentPropsI) => {
     return (
         <div className="project-box-container">
             <div className="project-box-image-container">
-                <img alt='project' className="project-box-image" src={image} />
+                <img alt='project' className="project-box-image" src={image} width={390} height={235} />
             </div>
             <div className={'project-box-content-container'}>
                 {content}

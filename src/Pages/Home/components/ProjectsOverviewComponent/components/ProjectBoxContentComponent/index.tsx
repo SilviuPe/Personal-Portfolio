@@ -18,7 +18,7 @@ const ProjectBoxContentComponent = (props: ProjectBoxContentComponentPropsI) => 
                 </div>
             </div>
             <div className={'project-box-redirect-section-container'}>
-                <img alt={`${link}`} src={redirectIcon}/>
+                <img alt={`${link}`} src={redirectIcon} width={12} height={12}/>
             </div>
         </div>
     )

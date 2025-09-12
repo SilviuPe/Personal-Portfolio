@@ -1,5 +1,8 @@
-import { FooterComponent} from "@components/Footer";
-import profilePhoto from "@assets/icons/profile.png";
+import { useEffect } from "react";
+
+// @ts-ignore
+import { HeaderComponent, FooterComponent} from "@components";
+import profilePhoto from "@assets/icons/profile.webp";
 
 import {GetInTouchButton,
     DownloadCVButton,
@@ -8,18 +11,23 @@ import {GetInTouchButton,
 
 import './style.css';
 
-const subsitleText = "I am a seasoned software engineer with over 4 years of professional experience <br/>" +
+const subtitleText = "I am a seasoned software engineer with over 4 years of professional experience <br/>" +
     "                    specializing in automation, Python, backend & frontend applications. <br/>" +
     "                    My expertise lies in building smart automation for daily tasks <br/>" +
     "                    as well as end-to-end full stack web applications.";
 
 function HomePage() {
+
+    useEffect(() => {
+        document.title = "Home";
+    }, []);
+
     return (
         <div className={'home-page-container'}>
-            <FooterComponent/>
+            <HeaderComponent/>
             <div className={'home-page-content-container fade-in'}>
                 <div className={'profile-image-container'}>
-                    <img alt="profile" src={profilePhoto}/>
+                    <img alt="profile" src={profilePhoto} width={176} height={167} />
                 </div>
 
                 <div className={'title-container'}>
@@ -32,7 +40,7 @@ function HomePage() {
 
                 <div className={'subtitle-container'}>
                     <p>
-                        {subsitleText.split("<br/>").map((line, idx) =>
+                        {subtitleText.split("<br/>").map((line, idx) =>
                             {
                                 return <>
                                     <span key={`${line} -- ${idx}`} className={'line'}>{line}</span><br/>
@@ -49,6 +57,7 @@ function HomePage() {
 
                 <ProjectsOverviewComponent/>
                 <ExperienceOverviewComponents/>
+                <FooterComponent/>
             </div>
         </div>
     )

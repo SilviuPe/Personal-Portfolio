@@ -6,9 +6,9 @@ import './style.css';
 
 // ########################################################################################## - HARDCODED (NEED TO COME FROM BACKEND)
 
-import testImage from './test.png';
-import testImage1 from './test1.png';
-import testImage2 from './test2.png';
+import testImage from './test2.webp';
+import testImage1 from './test2.webp';
+import testImage2 from './test2.webp';
 
 // ########################################################################################## - HARDCODED (NEED TO COME FROM BACKEND)
 
