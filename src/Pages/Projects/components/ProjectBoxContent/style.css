@@ -1,0 +1,25 @@
+.view-more-details {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.view-more-details p {
+    text-align: center;
+    color: var(--text-secundary);
+
+    font-weight: bolder;
+}
+
+.view-more-details img {
+    border-radius: 0;
+    rotate: 131deg;
+
+    margin-bottom: var(--spacing-s);
+}

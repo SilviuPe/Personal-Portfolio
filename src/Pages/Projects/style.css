@@ -1,0 +1,91 @@
+.projects-page-container {
+    padding-top: var(--spacing-2xl);
+    font-family: var(--font-primary), serif;
+}
+
+.projects-page-content-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--spacing-2xl);
+}
+
+.projects-page-content-introduction {
+    display: flex;
+
+    width: 60%;
+
+    gap: var(--spacing-x-large);
+}
+
+.projects-page-content-introduction-text-content {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+}
+
+.projects-page-content-introduction-text-content h1,  .projects-page-content-introduction-text-content p {
+    text-align: start;
+}
+
+.projects-page-content-introduction-animation-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 450px;
+    height: 450px;
+
+}
+
+.projects-page-content-introduction-text-content h1 {
+    color: var(--color-primary-white);
+    font-size: var(--text-1-point-5-x-large);
+
+    text-wrap: nowrap;
+}
+
+.projects-page-content-introduction-text-content p {
+    color: var(--text-secundary);
+    font-size: 1.25rem;
+}
+
+.projects-page-showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 200px;
+}
+
+.projects-page-showcase-container h2 {
+    font-size: var(--text-xl);
+
+    text-align: center;
+
+    padding: var(--spacing-2xl);
+
+    background: linear-gradient(
+            90deg,
+            #AD69FF,
+            #FF00AA
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* optional for non-WebKit browsers */
+    background-clip: text;
+    color: transparent;
+}
+
+.projects-page-showcase-content {
+    display: flex;
+
+    flex-direction: row;
+
+    gap: var(--spacing-x-large);
+}
