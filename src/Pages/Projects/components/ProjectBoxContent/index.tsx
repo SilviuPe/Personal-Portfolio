@@ -1,5 +1,6 @@
-import './style.css';
 import redirectIcon from '@assets/icons/redirectIconUp.png';
+
+import './style.css';
 
 const ProjectBoxContent = () => {
 

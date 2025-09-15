@@ -2,14 +2,15 @@ import {useEffect, useState} from "react";
 import Lottie from "lottie-react";
 
 import projectsAnimation from "@assets/animations/projects.json";
+// @ts-ignore
+import { FetchProjectsData } from "@api";
+import type { FetchProjectsDataItemI } from '@api/Projects/types';
 
 import { HeaderComponent} from "@components/Header";
 // @ts-ignore
 import { ProjectBoxComponent, FooterComponent } from "@components";
 
 import { ProjectBoxContent } from './components';
-
-import testImage from "./test.png";
 
 import type { ProjectsPageStateI } from './types.ts';
 
@@ -20,12 +21,11 @@ const defaultPageState = {
 }
 
 function ProjectsPage() {
-
+    const { data, loading, error } = FetchProjectsData()
     const [projectsPageState, setProjectPageState] = useState<ProjectsPageStateI>(defaultPageState)
 
 
-
-
+    // @ts-ignore
     const updateState = (newState : object) => {
         setProjectPageState({
             ...projectsPageState,
@@ -61,11 +61,9 @@ function ProjectsPage() {
                         <h2>SHOWCASE</h2>
                         <div className={'projects-page-showcase-content'}>
                             {
-                                projectsPageState?.focusedProject
-                                    ? <></>
-                                    : <>
-                                        <div onClick={()=>{updateState({focusedProject: 1})}}><ProjectBoxComponent image={testImage} content={<ProjectBoxContent/>}/></div>
-                                    </>
+                                loading ? <>Loading...</> : error ?
+                                <>{error}</> : data ? data.map((item:FetchProjectsDataItemI) =>
+                                    <ProjectBoxComponent image={item?.banner_url} content={<ProjectBoxContent/>}/>) : null
                             }
                         </div>
                     </div>

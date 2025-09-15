@@ -25,7 +25,8 @@
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["Components/*"],
-      "@assets/*": ["assets/*"]
+      "@assets/*": ["assets/*"],
+      "@api/*": ["API/*"]
     }
   },
   "extends": "./tsconfig.json",
