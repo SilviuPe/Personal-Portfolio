@@ -8,7 +8,7 @@ import type { FetchProjectsDataItemI } from '@api/Projects/types';
 
 import { HeaderComponent} from "@components/Header";
 // @ts-ignore
-import { ProjectBoxComponent, FooterComponent } from "@components";
+import { ProjectBoxComponent, FooterComponent, LoadingBarComponent } from "@components";
 
 import { ProjectBoxContent } from './components';
 
@@ -61,7 +61,7 @@ function ProjectsPage() {
                         <h2>SHOWCASE</h2>
                         <div className={'projects-page-showcase-content'}>
                             {
-                                loading ? <>Loading...</> : error ?
+                                loading ? <><LoadingBarComponent width={100} height={100}/></> : error ?
                                 <>{error}</> : data ? data.map((item:FetchProjectsDataItemI) =>
                                     <ProjectBoxComponent image={item?.banner_url} content={<ProjectBoxContent/>}/>) : null
                             }

@@ -1,3 +1,4 @@
 export * from "./Header";
 export * from "./ProjectBox";
 export * from "./Footer";
+export * from "./LoadingBar";
