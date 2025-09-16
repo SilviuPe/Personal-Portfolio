@@ -1,0 +1,136 @@
+.expanded-project-box-component-container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--spacing-2xl);
+}
+
+.expanded-project-box-content {
+    display: flex;
+    flex-direction: row;
+    background-color: #1C1B1A;
+    gap: var(--spacing-m);
+
+    border-radius: var(--spacing-x-large);
+}
+
+.expanded-project-box-image-workflow-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: var(--spacing-s);
+
+    border-radius: var(--spacing-m);
+}
+
+.mc-book-options {
+    padding-top: var(--spacing-xs);
+    padding-left: var(--spacing-xs);
+}
+
+.mc-book-options .red {
+    border-radius: 50px 30px 30px 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: start;
+
+    padding: 0.25rem var(--spacing-s);
+    gap: var(--spacing-m);
+
+    color: var(--text-secundary);
+    cursor: pointer;
+
+    font-weight: bold;
+
+    border: 2px solid var(--color-secondary);
+}
+
+.mc-book-options .red img {
+    rotate: 225deg;
+
+    display: flex;
+
+    height: 14px;
+    width: 14px;
+}
+
+.expanded-project-box-details-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+
+    padding: var(--spacing-2xl);
+}
+
+.expanded-project-box-details-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--spacing-xl);
+}
+
+.expanded-project-box-title-description .title {
+    font-size: var(--text-xl);
+    font-weight: bold;
+
+    color: var(--color-primary-white);
+}
+
+.expanded-project-box-title-description .description {
+    font-size: var(--text-m);
+
+    font-weight: normal;
+
+    color: var(--text-secundary);
+}
+
+.expanded-project-box-stack .title {
+    font-size: var(--text-m);
+    font-weight: bold;
+
+    color: var(--color-primary-white);
+}
+
+.expanded-project-box-stack .list-item {
+    gap: var(--spacing-xs);
+
+    color: var(--text-secundary);
+}
+
+.expanded-project-box-stack .list-item p {
+    margin: 0;
+}
+
+.expanded-project-box-repo-button-redirect button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: var(--spacing-m);
+
+    cursor: pointer;
+    color: var(--color-primary-white);
+
+
+    padding: var(--spacing-xs) var(--spacing-s);
+
+    border: 2px solid var(--color-primary-white);
+    border-radius: var(--spacing-xs);
+
+    font-weight: bold;
+    font-size: var(--text-m);
+
+    background: transparent;
+}
+
+.expanded-project-box-repo-button-redirect button p {
+    margin: 0;
+}

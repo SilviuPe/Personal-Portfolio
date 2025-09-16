@@ -1,6 +1,15 @@
+interface FetchProjectsDataStackItemI {
+    title: string;
+    value: string;
+}
+
 interface FetchProjectsDataItemI {
-    github_link : string;
+    repo_url : string;
     banner_url : string;
+    workflow_url : string;
+    description : string;
+    project_name : string;
+    stack: FetchProjectsDataStackItemI[]
 }
 
 interface FetchProjectsDataStateI {
@@ -9,4 +18,4 @@ interface FetchProjectsDataStateI {
     error: undefined | string;
 }
 
-export type { FetchProjectsDataStateI, FetchProjectsDataItemI};
+export type { FetchProjectsDataStateI, FetchProjectsDataItemI, FetchProjectsDataStackItemI};

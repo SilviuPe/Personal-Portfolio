@@ -10,6 +10,12 @@
 
 }
 
+.project-box-container-expanded {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .project-box-container:hover {
     margin-left: var(--spacing-xs);
     margin-right: var(--spacing-xs);

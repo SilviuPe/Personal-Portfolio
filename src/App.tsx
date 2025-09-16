@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { ContactPage, ExperiencePage, HomePage, ProjectsPage} from "./Pages";
 
+import '@animations/expandProject/index.css';
+
 export default function App() {
     return (
             <Routes>

@@ -10,7 +10,7 @@ import { HeaderComponent} from "@components/Header";
 // @ts-ignore
 import { ProjectBoxComponent, FooterComponent, LoadingBarComponent } from "@components";
 
-import { ProjectBoxContent } from './components';
+import { ProjectBoxContent, ExpandedProjectBoxComponent } from './components';
 
 import type { ProjectsPageStateI } from './types.ts';
 
@@ -27,10 +27,14 @@ function ProjectsPage() {
 
     // @ts-ignore
     const updateState = (newState : object) => {
-        setProjectPageState({
-            ...projectsPageState,
+        setProjectPageState((prevState) => ({
+            ...prevState,
             ...newState
-        })
+        }))
+    }
+
+    const displayAllProjects = () => {
+        updateState({focusedProject: undefined})
     }
 
     useEffect(() => {
@@ -62,8 +66,16 @@ function ProjectsPage() {
                         <div className={'projects-page-showcase-content'}>
                             {
                                 loading ? <><LoadingBarComponent width={100} height={100}/></> : error ?
-                                <>{error}</> : data ? data.map((item:FetchProjectsDataItemI) =>
-                                    <ProjectBoxComponent image={item?.banner_url} content={<ProjectBoxContent/>}/>) : null
+                                <>{error}</> : data ?
+                                        projectsPageState?.focusedProject?
+                                            data
+                                                .filter((item: FetchProjectsDataItemI) => projectsPageState?.focusedProject === item.repo_url)
+                                                .map((item: FetchProjectsDataItemI)=> <ExpandedProjectBoxComponent data={item} callbackMinimizeEvent={displayAllProjects}/>)
+
+                                            : data.map((item:FetchProjectsDataItemI) => <div onClick={(e)=>{
+                                                e.stopPropagation();updateState({focusedProject:item.repo_url})
+                                            }}><ProjectBoxComponent expand={false} banner={item?.banner_url} content={<ProjectBoxContent/>}/></div>)
+                                            : null
                             }
                         </div>
                     </div>
