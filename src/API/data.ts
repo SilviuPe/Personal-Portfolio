@@ -1,4 +1,4 @@
-const API = 'http://109.176.199.63:5000/';
+const API = '/api/';
 
 const end_points = {
     projects : 'projects'
