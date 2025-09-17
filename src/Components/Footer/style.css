@@ -63,14 +63,3 @@
     text-align: center;
     text-align-last: center;
 }
-
-.footer-content-social-media-container {
-    padding-top: var(--spacing-l);
-
-    display: flex;
-    gap: var(--spacing-xl);
-}
-
-.footer-content-social-media-container img {
-    cursor: pointer;
-}

@@ -1,0 +1,46 @@
+.dialog-box-component-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    z-index: 50;
+}
+
+.dialog-box-open {
+    animation-duration: 1s;
+    animation-name: fadeIn;
+}
+
+.dialog-box-closed {
+    animation-duration: 1s;
+    animation-name: fadeOut;
+
+    max-height: 0;
+    max-width: 0;
+}
+
+.dialog-box-component-container {
+    padding: 16px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -5,7 +5,7 @@ import type {ProjectBoxContentComponentPropsI} from './types';
 import './style.css';
 
 const ProjectBoxContentComponent = (props: ProjectBoxContentComponentPropsI) => {
-    const {title, subtitle, link } = props;
+    const {title, subtitle } = props;
 
     return (
         <div className={'project-box-content'}>
@@ -18,7 +18,7 @@ const ProjectBoxContentComponent = (props: ProjectBoxContentComponentPropsI) => 
                 </div>
             </div>
             <div className={'project-box-redirect-section-container'}>
-                <img alt={`${link}`} src={redirectIcon} width={12} height={12}/>
+                <img alt={'redirect'} src={redirectIcon} width={12} height={12}/>
             </div>
         </div>
     )

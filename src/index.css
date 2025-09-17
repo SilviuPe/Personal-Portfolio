@@ -82,6 +82,18 @@ body {
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
+    overflow: visible;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 1s ease-out forwards;
+    overflow: hidden;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
 @keyframes fadeIn {

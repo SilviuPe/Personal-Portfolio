@@ -14,7 +14,9 @@
     background-color: #1C1B1A;
     gap: var(--spacing-m);
 
-    border-radius: var(--spacing-x-large);
+    border-radius: var(--spacing-s);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+
 }
 
 .expanded-project-box-image-workflow-container {
@@ -134,3 +136,5 @@
 .expanded-project-box-repo-button-redirect button p {
     margin: 0;
 }
+
+

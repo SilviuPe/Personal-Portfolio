@@ -1,3 +1,4 @@
+import { useSearchParams } from 'react-router-dom';
 import {useEffect, useState} from "react";
 import Lottie from "lottie-react";
 
@@ -8,7 +9,7 @@ import type { FetchProjectsDataItemI } from '@api/Projects/types';
 
 import { HeaderComponent} from "@components/Header";
 // @ts-ignore
-import { ProjectBoxComponent, FooterComponent, LoadingBarComponent } from "@components";
+import { ProjectBoxComponent, FooterComponent, LoadingBarComponent, DialogBoxComponent } from "@components";
 
 import { ProjectBoxContent, ExpandedProjectBoxComponent } from './components';
 
@@ -24,6 +25,8 @@ function ProjectsPage() {
     const { data, loading, error } = FetchProjectsData()
     const [projectsPageState, setProjectPageState] = useState<ProjectsPageStateI>(defaultPageState)
 
+    const [searchParams] = useSearchParams();
+    const repoUrl = searchParams.get('repo_url');
 
     // @ts-ignore
     const updateState = (newState : object) => {
@@ -39,7 +42,32 @@ function ProjectsPage() {
 
     useEffect(() => {
         document.title = "Projects";
+
+        const hash = window.location.hash;
+
+        if (hash) {
+            const section = document.querySelector(hash);
+
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        if (repoUrl) {
+            updateState({focusedProject: repoUrl})
+        }
+
     }, []);
+
+    useEffect(() => {
+        if (projectsPageState.focusedProject === undefined) {
+            document.body.style.overflow = 'visible';
+        }
+        else {
+            document.body.style.overflow = 'hidden';
+        }
+
+    }, [projectsPageState]);
 
     return (
         <>
@@ -61,21 +89,34 @@ function ProjectsPage() {
                             </div>
                         </div>
                     </div>
-                    <div className={'projects-page-showcase-container'}>
+                    <div className={'projects-page-showcase-container'} id={'showcase'}>
                         <h2>SHOWCASE</h2>
                         <div className={'projects-page-showcase-content'}>
                             {
                                 loading ? <><LoadingBarComponent width={100} height={100}/></> : error ?
                                 <>{error}</> : data ?
-                                        projectsPageState?.focusedProject?
-                                            data
-                                                .filter((item: FetchProjectsDataItemI) => projectsPageState?.focusedProject === item.repo_url)
-                                                .map((item: FetchProjectsDataItemI)=> <ExpandedProjectBoxComponent data={item} callbackMinimizeEvent={displayAllProjects}/>)
 
-                                            : data.map((item:FetchProjectsDataItemI) => <div onClick={(e)=>{
-                                                e.stopPropagation();updateState({focusedProject:item.repo_url})
-                                            }}><ProjectBoxComponent expand={false} banner={item?.banner_url} content={<ProjectBoxContent/>}/></div>)
-                                            : null
+                                        <div style={{display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center', width: '100%'}}>
+                                            <div className={'project-extended-description-container'}>
+                                                {
+                                                    data
+                                                        .map((item: FetchProjectsDataItemI, index: number) => (
+                                                            <div key={`${item} -- ${index}`} onClick={(e)=>{
+                                                                e.stopPropagation();updateState({focusedProject:item.repo_url})
+                                                            }}><ProjectBoxComponent banner={item?.banner_url} content={<ProjectBoxContent/>}/></div>
+                                                        ))
+                                                }
+                                                {
+                                                    projectsPageState.focusedProject ?
+                                                        data.filter((item: FetchProjectsDataItemI) => item.repo_url === projectsPageState.focusedProject)
+                                                            .map((item: FetchProjectsDataItemI, index: number) => (
+                                                                <DialogBoxComponent closeCallback={displayAllProjects} open={true} content={
+                                                                    <div key={`${item}--${index}`}><ExpandedProjectBoxComponent data={item} callbackMinimizeEvent={displayAllProjects}/></div>
+                                                                }/>
+                                                            )) : null
+                                                }
+                                            </div>
+                                        </div> : null
                             }
                         </div>
                     </div>
