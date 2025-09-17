@@ -9,16 +9,39 @@ import supportIcon from '@assets/icons/customerSupportIcon.png';
 import salesmanIcon from '@assets/icons/salesmanIcon.png';
 import developmentIcon from '@assets/icons/developmentSetup.png';
 
-const description = "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide."
-const title = "Customer Technical Support at Primcast"
+const primcastRoleSupport = "Technical Support Operator – ensured proper functioning of client servers and services, maintained Linux and Windows servers, ensured they were delivered and fully operational for each client, communicated with clients via phone, chat, and email, and developed professional communication skills."
+const primcastRoleSales = "Salesperson – worked closely with clients to understand their needs and budget, providing tailored solutions to meet their requirements. Developed and applied professional sales techniques, built strong client relationships, and gained experience in negotiation and customer communication."
+const primcastRoleDeveloper = "I handled frontend development for our applications using React and TypeScript, fixed bugs, added new features, and collaborated closely with the backend developer to successfully implement those features."
 
-const description1 = "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide."
-const title1 = "Salesperson at Primcast"
-
-const description2 = "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide."
-const title2 = "Frontend Developer at Primcast"
-
-// ########################################################################################## - HARDCODED (NEED TO COME FROM BACKEND)
+const roles = [
+    {
+        icon: developmentIcon,
+        title: "Frontend Developer at Primcast",
+        description: primcastRoleDeveloper,
+        date: {
+            start: new Date(2025,1),
+            end: new Date(2025,6),
+        }
+    },
+    {
+        icon: salesmanIcon,
+        title: "Salesperson at Primcast",
+        description: primcastRoleSales,
+        date: {
+            start: new Date(2024,8),
+            end: new Date(2025,1),
+        }
+    },
+    {
+        icon: supportIcon,
+        title: "Customer Technical Support at Primcast",
+        description: primcastRoleSupport,
+        date: {
+            start: new Date(2024,1),
+            end: new Date(2025,1),
+        }
+    }
+]
 
 const ExperienceOverviewComponents = () => {
     return (
@@ -27,9 +50,11 @@ const ExperienceOverviewComponents = () => {
                 <h2>Experience</h2>
             </div>
             <div className={'experience-list-content-container'}>
-                <ExperienceSectionComponent icon={supportIcon} title={title} description={description} date={new Date()} />
-                <ExperienceSectionComponent icon={salesmanIcon} title={title1} description={description1} date={new Date()} />
-                <ExperienceSectionComponent icon={developmentIcon} title={title2} description={description2} date={new Date()} />
+                {
+                    roles.map((item) => (
+                        <ExperienceSectionComponent icon={item.icon} title={item.title} description={item.description} date={item.date} />
+                    ))
+                }
             </div>
             <div className={'experience-redirect-link-container'}>
                 <div className={'experience-redirect-link-content'} onClick={(event) => {

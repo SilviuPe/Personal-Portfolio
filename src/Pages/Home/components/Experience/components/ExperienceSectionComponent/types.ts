@@ -2,7 +2,10 @@ interface ExperienceSectionComponentPropsI {
     icon : string;
     title: string;
     description: string;
-    date: Date;
+    date: {
+        start: Date;
+        end: Date;
+    };
 }
 
 export type {ExperienceSectionComponentPropsI};

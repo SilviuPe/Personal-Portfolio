@@ -2,6 +2,21 @@ import type {ExperienceSectionComponentPropsI} from "./types.ts";
 
 import './style.css';
 
+const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+]
+
 const ExperienceSectionComponent = (props: ExperienceSectionComponentPropsI) => {
 
     const {icon, title, description, date} = props
@@ -19,7 +34,7 @@ const ExperienceSectionComponent = (props: ExperienceSectionComponentPropsI) => 
                 </div>
                 <div className={'experience-date-container'}>
                     <div className={'experience-date-content'}>
-                        <p>{date.toDateString()}</p>
+                        <p>{months[date.start.getMonth()]} {date.start.getFullYear()} - {months[date.end.getMonth()]} {date.end.getFullYear()}</p>
                     </div>
                 </div>
             </div>

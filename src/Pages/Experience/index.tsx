@@ -14,14 +14,13 @@ import { ExperienceSectionComponent} from "./components";
 import './style.css';
 import {FooterComponent} from "@components/Footer";
 
-// HARDCODED TEXT #################################################################################### (NEED TO BE CHANGED)
-
 const primcastDescription = "Primcast is a dedicated hosting platform that provides businesses and developers with reliable bare-metal infrastructure. \n" +
     "Built for performance and scalability, it delivers low-latency connectivity through a global network and offers rapid provisioning so users can get servers online almost instantly. With options ranging from entry-level machines to powerful GPU servers, Primcast supports a wide spectrum of workloads, including web applications, media streaming, artificial intelligence, and other compute-intensive tasks. The platform emphasizes stability, speed, and affordability, making it a practical choice for freelancers, startups, and enterprises seeking dependable hosting solutions."
-const primcastDescriptionS = "During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. \n" +
-    "Responsible for designing scalable and efficient systems, I provided technical leadership to a cross-functional team."
-const primcastDescriptionDev = "During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. \n" +
-    "Responsible for designing scalable and efficient systems, I provided technical leadership to a cross-functional team."
+
+const primcastRoleFrontend = "I handled frontend development for our applications using React and TypeScript, fixed bugs, added new\n" +
+    "features, and collaborated closely with the backend developer to successfully implement those features."
+const primcastRoleSales = "Salesperson – worked closely with clients to understand their needs and budget, providing tailored solutions to meet their requirements. Developed and applied professional sales techniques, built strong client relationships, and gained experience in negotiation and customer communication."
+const primcastRoleSupport = "Technical Support Operator – ensured proper functioning of client servers and services, maintained Linux and Windows servers, ensured they were delivered and fully operational for each client, communicated with clients via phone, chat, and email, and developed professional communication skills."
 
 const rolesPrimcast = [
     {
@@ -31,7 +30,7 @@ const rolesPrimcast = [
             dateStart: new Date(2024,1),
             dateEnd: new Date(2025,1),
         },
-        description: primcastDescription,
+        description: primcastRoleSupport,
     },
     {
         title: 'Role: Salesperson',
@@ -40,7 +39,7 @@ const rolesPrimcast = [
             dateStart: new Date(2024,8),
             dateEnd: new Date(2025,1),
         },
-        description: primcastDescriptionS,
+        description: primcastRoleSales,
     },
     {
         title: 'Role: Frontend Developer',
@@ -49,7 +48,7 @@ const rolesPrimcast = [
             dateStart: new Date(2025,1),
             dateEnd: new Date(2025,6),
         },
-        description: primcastDescriptionDev,
+        description: primcastRoleFrontend,
     }
 ]
 
@@ -67,7 +66,6 @@ const fiverrRoles = [
         description: fiverrDescriptionRole,
     }
 ]
-//#################################################################################### (NEED TO BE CHANGED)
 
 
 function ExperiencePage() {
